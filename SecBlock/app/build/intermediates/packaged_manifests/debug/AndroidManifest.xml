@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mukeshkumar.secblock"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="32" />
+
+    <!-- Permission will be merged into the manifest of the hosting app. -->
+    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <permission
+        android:name="com.mukeshkumar.secblock.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.mukeshkumar.secblock.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.BlockchainExampleWithJava" >
+        <activity
+            android:name="com.mukeshkumar.secblock.activities.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name="com.mukeshkumar.secblock.CreateAccountActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="com.mukeshkumar.secblock.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="com.mukeshkumar.secblock.OnBoardingScreen"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="com.mukeshkumar.secblock.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mukeshkumar.secblock.activities.RestorePowShortcutActivity"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- The activities will be merged into the manifest of the hosting app. -->
+        <activity
+            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+            android:enabled="false"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:process=":playcore_missing_splits_activity"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+        <service
+            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+            android:enabled="false"
+            android:exported="true" >
+            <meta-data
+                android:name="com.google.android.play.core.assetpacks.versionCode"
+                android:value="11003" />
+        </service>
+        <service
+            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+            android:enabled="false"
+            android:exported="false" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="genericidp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="recaptcha" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.mukeshkumar.secblock.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.mukeshkumar.secblock.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>

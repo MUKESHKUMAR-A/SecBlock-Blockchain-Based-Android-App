@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/item_block_data.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/item_block_data.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/activity_on_boarding_screen.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/activity_on_boarding_screen.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/switch_layout.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/switch_layout.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/activity_create_account.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/activity_create_account.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/content_main.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/activity_splash_screen.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/fragment_pow.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/fragment_pow.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/activity_login.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.mukeshkumar.secblock.app-mergeDebugResources-36:/layout/slides_layout.xml",
+        "source": "com.mukeshkumar.secblock.app-main-39:/layout/slides_layout.xml"
+    }
+]

@@ -1,0 +1,39 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mukeshkumar.secblock.app-mergeDebugResources-35:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\mukes\\AndroidStudioProjects\\SecBlock\\app\\src\\main\\res\\values-v25\\strings.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "76",
+                        "endOffsets": "552"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mukes\\.gradle\\caches\\transforms-3\\724b77b8afaec52072f7b409a6316813\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "557,628,711,810",
+                        "endLines": "7,8,10,12",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "623,706,805,916"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486779533501",
+    "project_id": "secblock-c932e",
+    "storage_bucket": "secblock-c932e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486779533501:android:bd3f2a39810c76243e9fd4",
+        "android_client_info": {
+          "package_name": "com.mukeshkumar.secblock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486779533501-0ojftm2lgrdjtr8a3j75mks31qh390j6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMNkOaiNPIguN88FxzS9eOAIp7A1tIuIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486779533501-0ojftm2lgrdjtr8a3j75mks31qh390j6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

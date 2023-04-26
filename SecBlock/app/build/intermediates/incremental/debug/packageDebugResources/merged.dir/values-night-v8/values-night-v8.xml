@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="colorAccent">#3DDB85</color>
+    <color name="colorPrimary">#3DDB85</color>
+    <color name="colorPrimaryDark">#29845B</color>
+    <color name="textCautionColor">#DD4E4E</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="textHintColor">#C1C1C1</color>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Theme.AppCompat.DayNight" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.BlockchainExampleWithJava" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>

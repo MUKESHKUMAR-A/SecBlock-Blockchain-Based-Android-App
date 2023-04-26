@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mukeshkumar.secblock">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BlockchainExampleWithJava"
+        tools:targetApi="31" >
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity android:name=".CreateAccountActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="false"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="false"/>
+        <activity
+            android:name=".OnBoardingScreen"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RestorePowShortcutActivity"
+            android:theme="@android:style/Theme.Translucent" />
+    </application>
+
+</manifest>
